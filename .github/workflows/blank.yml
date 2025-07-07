@@ -1,0 +1,98 @@
+# This is a basic workflow to help you get started with Actions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COOL & COOL - AC Repair Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-blue-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-6 shadow-md">
+    <h1 class="text-3xl font-bold">COOL & COOL</h1>
+    <p class="text-sm mt-1">Reliable AC Repair & Scheduling Services</p>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-16 px-4">
+    <h2 class="text-4xl font-extrabold text-blue-700 mb-4">AC Not Cooling? Call COOL & COOL!</h2>
+    <p class="text-lg mb-6">We repair your air conditioners, store your data securely, and schedule your next service — all in one place.</p>
+    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition">
+      Book a Repair
+    </a>
+  </section>
+
+  <!-- Services -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-6">Our Services</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h4 class="font-bold text-lg">AC Repair</h4>
+          <p class="mt-2 text-sm">Quick and professional repair for all AC brands and models.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h4 class="font-bold text-lg">Client Data Storage</h4>
+          <p class="mt-2 text-sm">We save your service history and contact for future visits.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h4 class="font-bold text-lg">Repair Scheduling</h4>
+          <p class="mt-2 text-sm">Pick your preferred time and we'll be there on schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 bg-blue-100 px-6">
+    <div class="max-w-xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-4">Book Your Repair</h3>
+      <p class="mb-6">Call us or fill out a form (coming soon) to schedule your repair!</p>
+      <p class="text-lg font-semibold">📞 +91-9876543210</p>
+      <p class="mt-2 text-sm text-gray-600">Or email us at: <a href="mailto:coolandcool@email.com" class="underline">coolandcool@email.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center p-4">
+    <p>&copy; 2025 COOL & COOL. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
