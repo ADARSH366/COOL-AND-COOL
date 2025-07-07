@@ -49,7 +49,7 @@
     <div class="max-w-xl mx-auto text-center">
       <h3 class="text-2xl font-bold mb-4">Book Your Repair</h3>
       <p class="mb-6">Call us or fill out a form (coming soon) to schedule your repair!</p>
-      <p class="text-lg font-semibold">📞 +91-9876543210</p>
+      <p class="text-lg font-semibold">📞 +91-7977796267</p>
       <p class="mt-2 text-sm text-gray-600">Or email us at: <a href="mailto:coolandcool@email.com" class="underline">coolandcool@email.com</a></p>
     </div>
   </section>
